@@ -1,0 +1,72 @@
+{
+  "name": "office-addin-taskpane-js",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OfficeDev/Office-Addin-TaskPane-JS.git"
+  },
+  "license": "MIT",
+  "config": {
+    "app-to-debug": "outlook",
+    "app-type-to-debug": "desktop",
+    "dev-server-port": 44308
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "tsc": "tsc -p tsconfig.json",
+    "tsc-w": "tsc -p tsconfig.json --watch",
+    "cpx": "cpx \"./src/**/!(*.ts)\" dist",
+    "cpx-w": "cpx \"./src/**/!(*.ts)\" dist --watch",
+    "generate": "npm-run-all clean -p tsc cpx",
+    "build": "npm-run-all clean -p tsc-w cpx-w",
+    "start": "nodemon dist/server.js --debug=5858",
+    "build-dev": "webpack --mode development --https false && echo . && echo . && echo . && echo Please use 'build:dev' instead of 'build-dev'.",
+    "dev-server": "webpack-dev-server --mode development",
+    "start:desktop": "office-addin-debugging start manifest.xml desktop",
+    "start:web": "office-addin-debugging start manifest.xml web",
+    "stop": "office-addin-debugging stop manifest.xml",
+    "validate": "office-toolbox validate -m manifest.xml",
+    "watch": "webpack --mode development --watch"
+  },
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^1.7.0",
+    "@types/cors": "^2.8.5",
+    "@types/express": "^4.17.0",
+    "@types/jsonwebtoken": "^8.3.3",
+    "@types/morgan": "^1.7.36",
+    "@types/node-persist": "0.0.33",
+    "cors": "^2.8.5",
+    "cpx": "^1.5.0",
+    "express": "^4.17.1",
+    "form-urlencoded": "^4.0.0",
+    "gulp": "^4.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "node-persist": "^3.0.5",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@types/office-js": "^1.0.9",
+    "@types/office-runtime": "^1.0.8",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "file-loader": "^3.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "office-addin-debugging": "^2.3.0",
+    "office-addin-dev-certs": "^1.2.4",
+    "office-toolbox": "^0.1.1",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.2",
+    "typescript": "^3.5.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
+  }
+}

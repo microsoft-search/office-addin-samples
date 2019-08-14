@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Microsoft Graph Search Api";
+}
+
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
+<script src="~/js/site.js" type="text/javascript"></script>
+
+<div>
+    <div id="main" style="float:left; width: 40vw">
+        <div>
+            <h2 class="ms-font-xl">Perform a Search</h2>
+            <input type="text" id="tbQuery" name="tbQuery" />
+            <input type="button" id="btnSearch" name="btnSearch" value="Search" /><br />
+            Type: <select id="entityType" name="entityType">
+                <option value="message">message</option>
+                <option value="event">event</option>
+                <option value="driveItem">driveItem</option>
+            </select><br />
+            Skip: <input type="text" id="tbSkip" name="tbSkip" value="0" /><br />
+            Count: <input type="text" id="tbCount" name="tbCount" value="25" /><br />
+            Debug: <input type="checkbox" id="cbDebug" name="cbDebug" />
+        </div>
+        <div id="results" style="display:none">
+            <h2>Results</h2>
+        </div>
+    </div>
+    <div style="width:30vw; float:left; word-break:break-all">
+        <div id="request">
+            <h2>Request</h2>
+            Waiting...
+        </div>
+        <div id="response">
+            <h2>Response</h2>
+            Waiting...
+        </div>
+    </div>
+    <div id="debug" style="display:none; float:left; width:20vw">
+        <h2>Debug</h2>
+    </div>
+</div>
