@@ -13,7 +13,7 @@
 
 ## Introduction
 
-TODO
+In this sample you will setup a .NET Core Web Application to make calls to the Microsoft Graph Search end point.  You will need access to an Azure subscription to create an Azure application and ability to add permissions to the application.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ Follow the steps in [Configuring Azure](./ConfigureAzure.md).
 
 ## Configure the project
 
-1.  Open the GraphSearchApi.sln solution with Visual Studio
+1.  Open the **/Sample1.0/GraphSearchApi/GraphSearchApi.sln** solution with Visual Studio
 2.  Open the **appsettings.json** file
 3.  Replace the values for the following:
 
@@ -44,13 +44,18 @@ Follow the steps in [Configuring Azure](./ConfigureAzure.md).
 ## Test the Application
 
 1.  Press **F5**
-2.  Run a search, you should see the results populate on the page.
-3.  You can also check the **debug** checkbox to see the request/response and other debug output from the api calls
+1.  Enter a search term in the text box
+1.  Select the type of data you would like to search
+
+![Enter a search term.](./media/s01_form.png 'Perform a Search')
+
+1.  Click **Search**, you should see the results populate on the page
+1.  You can also check the **debug** checkbox to see the request/response and other debug output from the api calls
 
 ## Code of note
 
-- The GraphController.cs contains the code to exchange the identity token for the graph token.
-- The wwwroot/scripts/site.js file contains the code that makes calls to the Graph Search API and then format it on the page
+- The **GraphController.cs** contains the code to exchange the identity token for the graph token.  This class utilizes the **GraphAuthProvider.cs** class to do the heavy lifting.
+- The **wwwroot/scripts/site.js** file contains the code that makes calls to the Graph Search API and then format it on the page
 
 ## Questions and comments
 
