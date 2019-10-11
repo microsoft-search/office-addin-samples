@@ -87,7 +87,11 @@ Follow the steps in [Configuring Azure](./ConfigureAzure.md).
 ![Start the web application](./media/s02_StartDebug.png 'Debug the project')
 
 3.  Switch back to Outlook, click **Retry** to refresh the application task pane.
-4.  Run a search, review the results
+4.  Type a search query in the textbox, click **Search**
+
+![Perform a search](./media/s02_Search.png 'Perform a search')
+
+5.  Review the results
 
 >NOTE: You can set the **debug** variable in the MessageRead.js to show debugging information during the search api call process
 
