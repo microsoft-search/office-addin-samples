@@ -26,7 +26,7 @@ This sample requires the following:
 
  1. Download or clone this repo.
 
-### Create an Azure AD Application
+## Configure Azure
 
 Follow the steps in [Configuring Azure](./ConfigureAzure.md).
 
