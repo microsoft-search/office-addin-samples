@@ -30,7 +30,7 @@
 - `http://localhost:44308/`
 - `http://localhost:44308/signin-oidc`
 
-> NOTE: All Microsoft Graph Search API samples are designed to run on port 44308.  If you create your own solution, be sure to modify this setting.
+> NOTE: All the Microsoft Graph Search API samples in this repo are designed to run on port 44308.  If you create your own solution, be sure to modify this setting.
 
 8. In the **Advanced settings** > **Implicit grant** section, check **ID tokens** as Sample 1.0 requires the [Implicit grant flow](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-implicit-grant-flow) to be enabled to sign-in the user and call an API.
 

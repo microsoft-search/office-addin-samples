@@ -184,7 +184,7 @@
       </Resources>
       <WebApplicationInfo>
         <Id>eb343a99-ba17-4cc1-87f5-86a9bbb64943</Id>
-        <Resource>api://localhost:44308/eb343a99-ba17-4cc1-87f5-86a9bbb6494344</Resource>
+        <Resource>api://localhost:44308/eb343a99-ba17-4cc1-87f5-86a9bbb64943</Resource>
         <Scopes>
           <Scope>user.read</Scope>
           <Scope>files.read.all</Scope>

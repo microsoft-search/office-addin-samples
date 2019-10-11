@@ -13,7 +13,12 @@
 
 ## Introduction
 
-TODO
+This sample contains a Visual Studio project in C#.Net that will create an Outlook AddIn with the corresponding web application to support it.  The components in this sample will allow you to make calls to the Microsoft Graph Search endpoint from Outlook.  You can then add onto the functionality to do your own application development.  Consider the following potential things you could do:
+
+- Find documents related to email title
+- Review an invite, auto search data for non-conflicts
+- Meeting on project X coming up, search your OneDrive for corresponding items
+- Look for documents related to an email and suggest them for review
 
 ## Prerequisites
 
@@ -32,7 +37,7 @@ Follow the steps in [Configuring Azure](./ConfigureAzure.md).
 
 ## Configure the project
 
-1.  Open the /GraphSearchApiOutlook/GraphSearchApiOutlook.sln solution with Visual Studio
+1.  Open the **Sample2.0/GraphSearchApiOutlook/GraphSearchApiOutlook.sln** solution with Visual Studio
 2.  Open the **web.config** file
 3.  Replace the values for the following:
 
@@ -43,19 +48,36 @@ Follow the steps in [Configuring Azure](./ConfigureAzure.md).
 ## Update the AddIn xml
 
 1.  Open the **GraphSearchApiOutlook.xml** file
-2.  Scroll to the bottom of the file, in the **WebApplicationInfo** section, ensure that the clientid matches the client id from the Configuring Azure steps
+2.  Scroll to the bottom of the file, in the **WebApplicationInfo** section, ensure that the clientid matches the client id from the task above
+
+![Enter your application id and the uri](./media/s02_WebAppInfo.png 'Update the AddIn xml')
+
+> NOTE: All the Microsoft Graph Search API samples in this repo are designed to run on port 44308.  If you create your own solution, be sure to modify this setting.
+
 3.  Save the file
 
 ## Register the AddIn with Outlook
 
 1.  Open Outlook
-2.  In the ribbon, click **Get Add-ins**
+2.  In the ribbon, on the **Home** tab, select **Get Add-ins**
+
+![The Get AddIns ribbon button](./media/s02_OutlookRibbonAddIn.png 'Select Get Add-ins')
+
 3.  Click **My add-ins**, then scroll down to the **Custom add-ins** section
 4.  Click **Add a custom add-in->Add from file**
-5.  Browse to the **GraphSearchApiOutlook.xml** file, click **Open**
-6.  Close the AddIn window
-7.  You should now have a new ribbon item in a group called **Graph Search** and a button called **Search**
-8.  Click the button, you should the task pane open with error.
+
+![The Get AddIns ribbon button](./media/s02_AddCustomAddIn.png 'Select Get Add-ins')
+
+5.  Browse to the **Sample2.0/GraphSearchApiOutlook/GraphSearchApiOutlookManifest/GraphSearchApiOutlook.xml** file, click **Open**
+6.  When prompted, click **Install**
+7.  Close the AddIn window
+8.  You should now have a new ribbon item in a group called **Graph Search** and a button called **Search**
+
+![The Search Ribbon button is displayed](./media/s02_SearchRibbon.png 'The new ribbon button')
+
+9.  Click the button, you should the task pane open with error.
+
+![The Search Ribbon button is displayed](./media/s02_SearchRibbonError.png 'The new ribbon button')
 
 ## Test the AddIn
 

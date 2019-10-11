@@ -19,7 +19,7 @@
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
   <DisplayName DefaultValue="Graph Search Api" />
   <Description DefaultValue="Graph Search Api"/>
-  <IconUrl DefaultValue="https://localhost:44391/Images/icon64.png"/>
+  <IconUrl DefaultValue="https://localhost:44308/Images/icon64.png"/>
 
   <SupportUrl DefaultValue="http://www.contoso.com" />
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
@@ -41,7 +41,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:44391/MessageRead.html"/>
+        <SourceLocation DefaultValue="https://localhost:44308/MessageRead.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -101,22 +101,22 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://localhost:44391//Images/icon16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://localhost:44391//Images/icon32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://localhost:44391//Images/icon80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://localhost:44308//Images/icon16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://localhost:44308//Images/icon32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://localhost:44308//Images/icon80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://localhost:44391//Functions/FunctionFile.html"/>
-        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://localhost:44391//MessageRead.html"/>
+        <bt:Url id="functionFile" DefaultValue="https://localhost:44308//Functions/FunctionFile.html"/>
+        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://localhost:44308//MessageRead.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="Graph Search"/>
         <bt:String id="customTabLabel"  DefaultValue="Graph Search"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="Graph Search"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="Graph Search"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="paneReadSuperTipDescription" DefaultValue="Task pane app that does a search based on email properties."/>
+        <bt:String id="paneReadSuperTipDescription" DefaultValue="Task pane app that does a search based with Microsoft Graph API"/>
       </bt:LongStrings>
     </Resources>
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
@@ -166,27 +166,27 @@
 
       <Resources>
         <bt:Images>
-          <bt:Image id="icon16" DefaultValue="https://localhost:44391//Images/icon16.png"/>
-          <bt:Image id="icon32" DefaultValue="https://localhost:44391//Images/icon32.png"/>
-          <bt:Image id="icon80" DefaultValue="https://localhost:44391//Images/icon80.png"/>
+          <bt:Image id="icon16" DefaultValue="https://localhost:44308//Images/icon16.png"/>
+          <bt:Image id="icon32" DefaultValue="https://localhost:44308//Images/icon32.png"/>
+          <bt:Image id="icon80" DefaultValue="https://localhost:44308//Images/icon80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="functionFile" DefaultValue="https://localhost:44391//Functions/FunctionFile.html"/>
-          <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://localhost:44391//MessageRead.html"/>
+          <bt:Url id="functionFile" DefaultValue="https://localhost:44308//Functions/FunctionFile.html"/>
+          <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://localhost:44308//MessageRead.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="groupLabel" DefaultValue="Graph Search"/>
           <bt:String id="customTabLabel"  DefaultValue="Graph Search"/>
-          <bt:String id="paneReadButtonLabel" DefaultValue="Display all properties"/>
-          <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
+          <bt:String id="paneReadButtonLabel" DefaultValue="Search"/>
+          <bt:String id="paneReadSuperTipTitle" DefaultValue="Graph Search"/>
         </bt:ShortStrings>
         <bt:LongStrings>
-          <bt:String id="paneReadSuperTipDescription" DefaultValue="Task pane app that does a search based on email properties."/>
+          <bt:String id="paneReadSuperTipDescription" DefaultValue="Task pane app that does a search based with Microsoft Graph API"/>
         </bt:LongStrings>
       </Resources>
       <WebApplicationInfo>
         <Id>eb343a99-ba17-4cc1-87f5-86a9bbb64943</Id>
-        <Resource>api://localhost:44391/eb343a99-ba17-4cc1-87f5-86a9bbb6494344</Resource>
+        <Resource>api://localhost:44308/eb343a99-ba17-4cc1-87f5-86a9bbb64943</Resource>
         <Scopes>
           <Scope>user.read</Scope>
           <Scope>files.read</Scope>
