@@ -100,6 +100,40 @@ https://login.microsoftonline.com/TENANT_ID/adminconsent?client_id=APPLICATION_I
 
 >**Note:** Because there is no application currently running at the redirect URL you will be receive an error message. This behavior is expected. The Tenant Administrator consent will have been granted by the time this error page is shown.
 
+### Expose an API 
+
+1.  Select **Expose an API** 
+
+1.  For the Application ID URI, type **api://localhost:44308/CLIENTID**, where the CLIENTID is the client id of the Azure application.
+
+1.  Select **Add a scope**
+
+1.  For the scope name, type **access_as_user**
+
+1.  For the admin consent display name, type **Office can act as the user**
+
+1.  For the admin consent description, type **Enable Office to call the add-in's web APIs with the same rights as the current user.**
+
+1.  For the user consent display name, type **Office can act as you.**
+
+1.  For the user consent description, type **Enable Office to call the add-in's web APIs with the same rights that you have.**
+
+![The Add scope dialog](./media/setup10_AddScope.png 'Add an API Scope')
+
+1.  Select **Save**
+
+1.  Select **Add a client application**, authorize the following client id for the scope you just added:
+
+1.  For the client id, add the following:
+
+-   bc59ab01-8403-45c6-8796-ac3ef710b3e3
+-   57fb890c-0dab-4253-a5e0-7188c88b2bb4
+-   d3590ed6-52b3-4102-aeff-aad2292ab01c
+
+1.  You should now see the following:
+
+![The Authorized Applications](./media/setup11_AuthorizedApps.png 'Adding authorized apps')
+
 ### Authorize users in your organization to access the Microsoft Graph security API
 
 To access security data through the Microsoft Graph security API, the client application must be granted the required permissions and when operating in Delegated Mode, the user signed in to the application must also be authorized to call the Microsoft Graph security API.

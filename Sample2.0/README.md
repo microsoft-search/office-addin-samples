@@ -83,10 +83,15 @@ Follow the steps in [Configuring Azure](./ConfigureAzure.md).
 
 1.  Switch back to Visual Studio
 2.  Right-click the **GraphSearchApiOutlookWeb** project, select **Debug->Start new instance**
+
+![Start the web application](./media/s02_StartDebug.png 'Debug the project')
+
 3.  Switch back to Outlook, click **Retry** to refresh the application task pane.
 4.  Run a search, review the results
 
 >NOTE: You can set the **debug** variable in the MessageRead.js to show debugging information during the search api call process
+
+![The debug variable in the message.js file](./media/s02_DebugVar.png 'Set the debug variable to true')
 
 ## Code of note
 
