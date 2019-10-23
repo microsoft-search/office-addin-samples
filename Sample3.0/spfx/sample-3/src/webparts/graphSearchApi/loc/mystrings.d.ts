@@ -4,6 +4,7 @@ declare interface IGraphSearchApiWebPartStrings {
   DescriptionFieldLabel: string;
   ClientModeLabel: string;
   SearchFor: string;
+  ExternalPath: string;
   SearchForValidationErrorMessage: string;
 }
 

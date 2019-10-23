@@ -10,6 +10,10 @@
     "webApiPermissionRequests": [
       {
         "resource": "Microsoft Graph",
+        "scope": "ExternalItem.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
         "scope": "Mail.Read"
       },
       {

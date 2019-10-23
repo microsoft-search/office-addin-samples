@@ -123,6 +123,7 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
     this.state = {
       results: [],
       searchFor: "",
+      externalPath: "",
       resultType: "message",
       includeEvents: false,
       includeFiles: false,
@@ -152,11 +153,11 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
                   <ChoiceGroup
                     defaultSelectedKey="message"
                     onChange={ this._onChoiceChanged }
-                    label='Pick one' 
+                    label='Pick one'
                     required={ true }
                     options={ [ 
                       { 
-                        key: 'message',  
+                        key: 'message',
                         text: 'message', 
                       }, 
                       { 
@@ -166,8 +167,23 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
                       { 
                         key: 'event',  
                         text: 'event', 
+                      }, 
+                      { 
+                        key: 'externalItem',  
+                        text: 'externalItem', 
+                      }, 
+                      { 
+                        key: 'externalFile',  
+                        text: 'externalFile', 
                       } 
-                    ] } 
+                    ] }
+                  />
+                  <TextField 
+                    label={ strings.ExternalPath } 
+                    required={ false } 
+                    value={ this.state.externalPath }
+                    onChanged={ this._onExtPathChanged }
+                    onGetErrorMessage={ this._getSearchForErrorMessage }
                   />
               </p>
               {
@@ -210,11 +226,20 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
   } 
 
   @autobind
+  private _onExtPathChanged(newValue: string): void {
+
+    // Update the component state accordingly to the current user's input
+    this.setState({
+      externalPath: newValue
+    });
+  }
+
+  @autobind
   private _onSearchForChanged(newValue: string): void {
 
     // Update the component state accordingly to the current user's input
     this.setState({
-      searchFor: newValue,
+      searchFor: newValue
     });
   }
 
