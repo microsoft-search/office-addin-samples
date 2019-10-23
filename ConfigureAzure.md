@@ -60,6 +60,7 @@
 
 1. In the **Delegated permissions** section, make sure that the following *delegated* permissions are checked: 
 
+   -  **ExternalItem.Read.All**
    -  **Calendars.Read**
    -  **Files.Read.All**
    -  **Mail.Read**
