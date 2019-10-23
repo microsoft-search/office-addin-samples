@@ -9,32 +9,54 @@
     <div id="main" style="float:left; width: 40vw">
         <div>
             <h2 class="ms-font-xl">Perform a Search</h2>
-            <input type="text" id="tbQuery" name="tbQuery" />
-            <input type="button" id="btnSearch" name="btnSearch" value="Search" /><br />
-            Type: <select id="entityType" name="entityType">
-                <option value="message">message</option>
-                <option value="event">event</option>
-                <option value="driveItem">driveItem</option>
-            </select><br />
-            Skip: <input type="text" id="tbSkip" name="tbSkip" value="0" /><br />
-            Count: <input type="text" id="tbCount" name="tbCount" value="25" /><br />
-            Debug: <input type="checkbox" id="cbDebug" name="cbDebug" />
+            <div>
+                <div style="float:left; width:100px">Query</div>
+                <div style="float:left"><input type="text" id="tbQuery" name="tbQuery" /><input type="button" id="btnSearch" name="btnSearch" value="Search" /></div>
+            </div>
+            <div style="clear:both">
+                <div style="float:left; width:100px">Type</div>
+                <div style="float:left">
+                    <select id="entityType" name="entityType">
+                        <option value="message">message</option>
+                        <option value="event">event</option>
+                        <option value="driveItem">driveItem</option>
+                        <option value="externalFile">externalFile</option>
+                        <option value="externalItem">externalItem</option>
+                    </select>
+                </div>
+            </div>
+            <div style="clear:both">
+                <div style="float:left; width:100px">Skip</div>
+                <div style="float:left"><input type="text" id="tbSkip" name="tbSkip" value="0" /></div>
+            </div>
+            <div style="clear:both">
+                <div style="float:left; width:100px">Count</div>
+                <div style="float:left"><input type="text" id="tbCount" name="tbCount" value="25" /></div>
+            </div>
+            <div style="clear:both">
+                <div style="float:left; width:100px">ExternalSource</div>
+                <div style="float:left"><input type="text" id="tbExternalSource" name="tbExternalSource" value="" /></div>
+            </div>
+            <div style="clear:both">
+                <div style="float:left; width:100px">Debug</div>
+                <div style="float:left">                    <input type="checkbox" id="cbDebug" name="cbDebug" /></div>
+            </div>
         </div>
+        <div style="clear:both"></div>
         <div id="results" style="display:none">
             <h2>Results</h2>
         </div>
-    </div>
-    <div style="width:30vw; float:left; word-break:break-all">
-        <div id="request">
-            <h2>Request</h2>
-            Waiting...
+        <div style="width:30vw; float:left; word-break:break-all">
+            <div id="request">
+                <h2>Request</h2>
+                Waiting...
+            </div>
+            <div id="response">
+                <h2>Response</h2>
+                Waiting...
+            </div>
         </div>
-        <div id="response">
-            <h2>Response</h2>
-            Waiting...
+        <div id="debug" style="display:none; float:left; width:20vw">
+            <h2>Debug</h2>
         </div>
     </div>
-    <div id="debug" style="display:none; float:left; width:20vw">
-        <h2>Debug</h2>
-    </div>
-</div>
