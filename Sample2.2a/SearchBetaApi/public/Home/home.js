@@ -270,7 +270,6 @@
           request["stored_fields"].push("to");
           request["stored_fields"].push("subject");
           request["stored_fields"].push("body");
-  
 
         var jsonObj = {};
         var requests = [];

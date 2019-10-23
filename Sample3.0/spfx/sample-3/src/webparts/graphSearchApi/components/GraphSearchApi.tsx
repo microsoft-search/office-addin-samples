@@ -251,10 +251,9 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
     this.props.context.aadHttpClientFactory
       .getClient('https://graph.microsoft.com')
       .then((client: AadHttpClient) => {
-        // Search for the users with givenName, surname, or displayName equal to the searchFor value
         return client
           .get(
-            `https://graph.microsoft.com/beta/search')`,
+            `https://graph.microsoft.com/beta/search/query')`,
             AadHttpClient.configurations.v1
           );
       })
@@ -327,11 +326,14 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
     }
     
 
+
     const data  = {
       requests: 
       [
         {
-          entityType: "microsoft.graph." + this.state.resultType,
+          entityTypes: [
+            "microsoft.graph." + this.state.resultType,
+          ],
           query: {
             query_string : {
               query : query
@@ -339,15 +341,13 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
           },
           from: 0,
           size: 25,
-          /*
-          _sources: 
+          stored_fields: 
           [
             "from",
             "to",
             "subject",
             "body"
           ]
-          */
         }
     ]
   };
@@ -356,7 +356,7 @@ export default class GraphSearchApi extends React.Component<IGraphSearchApiProps
       .getClient()
       .then((client: MSGraphClient): void => {
         client
-          .api("search")
+          .api("search/query")
           .version("beta")
           .post(data)
           .then((res) => {

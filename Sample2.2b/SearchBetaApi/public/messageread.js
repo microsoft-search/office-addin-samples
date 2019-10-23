@@ -130,18 +130,19 @@
   
       function doSearch(query, entityType) {
   
-          var request = {};
-          request.entityType = "microsoft.graph." + entityType;
-          request.query = {};
-          request.query["query_string"] = {};
-          request.query["query_string"].query = query;
-          request.from = 0;
-          request.size = 25;
-          request["_sources"] = [];
-          request["_sources"].push("from");
-          request["_sources"].push("to");
-          request["_sources"].push("subject");
-          request["_sources"].push("body");
+        var request = {};
+        request["entityTypes"] = [];
+        request["entityTypes"].push("microsoft.graph." + entityType);
+        request.query = {};
+        request.query["query_string"] = {};
+        request.query["query_string"].query = query;
+        request.from = 0;
+        request.size = 25;
+        request["stored_fields"] = [];
+        request["stored_fields"].push("from");
+        request["stored_fields"].push("to");
+        request["stored_fields"].push("subject");
+        request["stored_fields"].push("body");
   
           var jsonObj = {};
           var requests = [];
@@ -149,7 +150,7 @@
           jsonObj["requests"] = requests;
   
           var jsonString = JSON.stringify(jsonObj);
-          var url = graphUrl + "/" + version + "/search";
+          var url = graphUrl + "/" + version + "/search/query";
   
           writeDebug(jsonString);
   
